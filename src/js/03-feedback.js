@@ -1,11 +1,11 @@
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 
 const STORAGE_KEY = 'feedback-form-state';
 
 const form = document.querySelector('.feedback-form');
 
 form.addEventListener('submit', onFormSubmit);
-form.addEventListener('input', debounce(onFormInput, 500));
+form.addEventListener('input', throttle(onFormInput, 500));
 
 
 initForm();
