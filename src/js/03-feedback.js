@@ -36,10 +36,11 @@ function initForm() {
 
     if (saveMessage) {
         saveMessage = JSON.parse(saveMessage);
-    }
-
-    Object.entries(saveMessage).forEach(
+        Object.entries(saveMessage).forEach(
         ([name, value]) => (form.elements[name].value = value),
     );
+    }
+
+    
 };
 
