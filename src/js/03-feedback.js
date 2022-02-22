@@ -13,7 +13,11 @@ initForm();
 function onFormSubmit(event) {
     event.preventDefault();
 
-    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+    // console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+
+    const submitData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (!submitData) return;
+    console.log(submitData);
     
     event.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
